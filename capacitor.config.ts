@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.samru',
-  appName: 'vendor App',
+  appId: 'io.ionic.samruddhi',
+  appName: 'FRANSALON',
   webDir: 'www',
   bundledWebRuntime: false,
 

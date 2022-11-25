@@ -8,7 +8,7 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating"> GST/Gumasta No</ion-label>
-      <ion-input type="text" name="gstNo" [(ngModel)]="data.gstNo" required></ion-input>
+      <ion-input type="text" [(ngModel)]="data.gstNo"name="gstNo"  required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating"> Store Name</ion-label>
@@ -121,11 +121,12 @@
       <ion-input type="text" name="name" [(ngModel)]="data.branch" required></ion-input>
     </ion-item>
      
-    <br />
+    <br /> 
     <ion-row>
       <ion-col>
         <ion-button type="submit" color="dark" expand="block" (click)="doSubmitForm()">Register</ion-button
         >
+        <ion-button></ion-button>
         <!----<a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>-->
       </ion-col>
     </ion-row>

@@ -3,6 +3,7 @@ import { SpregisterService } from 'src/app/services/spregister.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
+import {  MenuController,NavController } from '@ionic/angular';
 import { async } from 'rxjs';
 
 @Component({
@@ -26,7 +27,9 @@ export class RegisterspPage implements OnInit {
   constructor(
     SpregisterService: SpregisterService,
     private toastController: ToastController,
-    private router: Router
+    private router: Router,
+    public menu: MenuController,
+    private nav: NavController
   ) {}
 
   ngOnInit() {}
@@ -64,7 +67,11 @@ export class RegisterspPage implements OnInit {
      });
     await toast.present();
   }
-
+  ionViewDidEnter() {
+    // Use the id to enable/disable the menus
+    this.menu.enable(true, 'main');
+    this.menu.enable(false, 'main1');
+  }
 
 }
 

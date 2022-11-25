@@ -1,3 +1,69 @@
+
+ 
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar >
+        <ion-title> </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">  
+      <ion-menu-toggle>
+        <ion-item routerLink="/sphome">
+          <ion-label>
+           Home
+          </ion-label>
+          <ion-icon name="home" size="small" slot="start"></ion-icon>
+        </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/spregister-user">
+            <ion-label>
+              Register User
+            </ion-label>
+            <ion-icon name="person-add" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+            <ion-menu-toggle>
+          <ion-item routerLink="/sp-qr-scanner">
+            <ion-label>
+              QR-Scanner
+            </ion-label>
+            <ion-icon name="scan-circle" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+    
+      <ion-menu-toggle>
+          <ion-item routerLink="/sp-invoices">
+            <ion-label>
+              Invoices
+            </ion-label>
+            <ion-icon name="albums" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+    
+      <ion-menu-toggle>
+          <ion-item routerLink="/sp-service-list">
+            <ion-label>
+              Services List
+            </ion-label>
+            <ion-icon name="list" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+      <ion-menu-toggle>
+          <ion-item routerLink="/login">
+            <ion-label>
+               Logout
+            </ion-label>
+            <ion-icon name="log-out" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+      
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+
+
 <ion-header>
   <ion-toolbar>
     <ion-menu-button main="menu" slot="start"></ion-menu-button>

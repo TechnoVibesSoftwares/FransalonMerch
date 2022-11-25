@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  MenuController,NavController } from '@ionic/angular'
 
 @Component({
   selector: 'app-invoices',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoicesPage implements OnInit {
 
-  constructor() { }
+  constructor(public menu: MenuController,private nav: NavController) { }
 
   ngOnInit() {
   }
-
+  ionViewDidEnter() {
+    // Use the id to enable/disable the menus
+    this.menu.enable(true, 'main');
+    this.menu.enable(false, 'main1');
+  }
 }

@@ -65,6 +65,32 @@ const routes: Routes = [
     path: 'wel',
     loadChildren: () => import('./pages/wel/wel.module').then( m => m.WelPageModule)
   },
+  
+  {
+    path: 'splogin',
+    loadChildren: () => import('./pages/splogin/splogin.module').then( m => m.SploginPageModule)
+  },
+  {
+    path: 'sphome',
+    loadChildren: () => import('./pages/sphome/sphome.module').then( m => m.SphomePageModule)
+  },
+  {
+    path: 'spregister-user',
+    loadChildren: () => import('./pages/spregister-user/spregister-user.module').then( m => m.SpregisterUserPageModule)
+  },
+  {
+    path: 'sp-qr-scanner',
+    loadChildren: () => import('./pages/sp-qr-scanner/sp-qr-scanner.module').then( m => m.SpQrScannerPageModule)
+  },
+  {
+    path: 'sp-invoices',
+    loadChildren: () => import('./pages/sp-invoices/sp-invoices.module').then( m => m.SpInvoicesPageModule)
+  },
+  {
+    path: 'sp-service-list',
+    loadChildren: () => import('./pages/sp-service-list/sp-service-list.module').then( m => m.SpServiceListPageModule)
+  },
+  
 ];
 
 @NgModule({
