@@ -1,0 +1,36 @@
+<ion-header>
+ <ion-toolbar>
+  <ion-fab vertical="top" edge horizontal="end"   id="bgh">
+   
+      <ion-icon name="close-outline" color="medium"  routerLink="/login"></ion-icon>
+   
+  </ion-fab>
+ </ion-toolbar>
+</ion-header>
+ 
+<ion-content [fullscreen]="true">
+  <div id="bg">
+    
+  </div>
+  <ion-list lines="none" class="ion-margin">
+    <ion-list-header>    Forgot Password!</ion-list-header>
+    <form></form>
+    <ion-item class="ion-margin" >
+      <ion-input placeholder="Enter Email Id" type="text" clearInput="true"[(ngModel)]="login.email"  >  </ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder=" New Password" type="password" clearInput="true" [(ngModel)]="login.pass" ></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder=" Confirm Password" type="password" clearInput="true" [(ngModel)]="login.confirmpas" ></ion-input>
+    </ion-item>
+ 
+    <div align="right">
+      <ion-button shape="round" strong="true" class="ion-margin-end" color="dark" (click)="logini()">
+   Submit
+        <!-- routerLink="/tabs"  -->
+        <ion-icon name="log-in" slot="end"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>

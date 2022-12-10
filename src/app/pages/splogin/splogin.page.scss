@@ -1,7 +1,37 @@
-ion-card-title{
-    font-weight: 800;
-    text-align: center;
+#bg {
+    height: 50%;
+    width: 500px;
+    background: var(--ion-color-dark) url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdk394F1whKUWWkrIIso9vRoAcst8usKCcg&usqp=CAU') no-repeat center center/cover;
+    border-radius: 0 0 45% 45%;
+    margin-left: -21vw;
+    position: relative;
 }
-ion-card{
-    height: 100%;
+ion-fab {
+    ion-icon {
+        font-size: 1.6rem;
+    }
+}
+#bgh{
+    padding-right: 70%;
+    padding-left: 1%;
+    margin-top: 6%;
+}
+
+ion-list {
+    margin-top: 6vh;
+    ion-list-header {
+        font-weight: 1000;
+        font-size: 1.5rem;
+    }
+    ion-item {
+        border: 1px solid var(--ion-color-light);
+        border-radius: 20px;
+        -webkit-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+        -moz-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+        box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    }
+    p {
+        font-size: 0.8rem;
+        padding-left: 5vw;
+    }
 }

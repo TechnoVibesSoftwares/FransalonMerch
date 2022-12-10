@@ -69,10 +69,16 @@ export class AppComponent {
 
 
  
+  getLogout(){
+    console.log('Inside logout');
+    this.storage.remove('access_token');
+    
+    this.router.navigateByUrl('/wel');
+  }
   
 
-  logout(){
-    this.authService.getLogout(); 
-    this.router.navigateByUrl('/login');
-  }
+  // logout(){
+  //   this.authService.getLogout(); 
+  //   this.router.navigateByUrl('/login');
+  // }
 }

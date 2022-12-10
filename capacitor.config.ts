@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.samruddhi',
+  appId: 'io.ionic.sm',
   appName: 'FRANSALON',
   webDir: 'www',
   bundledWebRuntime: false,
@@ -11,6 +11,7 @@ const config: CapacitorConfig = {
     cleartext: true,
     allowNavigation: [
       'http://fransalonapp-env-1.eba-mv3mavpj.ap-northeast-1.elasticbeanstalk.com'
+      
 
     ]
   },

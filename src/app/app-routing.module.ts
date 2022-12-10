@@ -90,6 +90,10 @@ const routes: Routes = [
     path: 'sp-service-list',
     loadChildren: () => import('./pages/sp-service-list/sp-service-list.module').then( m => m.SpServiceListPageModule)
   },
+  {
+    path: 'forgot',
+    loadChildren: () => import('./pages/forgot/forgot.module').then( m => m.ForgotPageModule)
+  },
   
 ];
 
