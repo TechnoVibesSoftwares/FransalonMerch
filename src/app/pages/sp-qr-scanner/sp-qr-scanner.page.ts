@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  MenuController,NavController } from '@ionic/angular';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+import { IonModal } from '@ionic/angular';
 
 @Component({
   selector: 'app-sp-qr-scanner',
@@ -10,7 +11,7 @@ import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 export class SpQrScannerPage implements OnInit {
   scanActive = false;
   textOutput: any ='Output';
-
+  isModalOpen = false;
 
   constructor(public menu: MenuController,private nav: NavController) {}
   ngOnInit() {}
@@ -28,7 +29,7 @@ export class SpQrScannerPage implements OnInit {
     });
   }
 
-  async startScanner() {
+  async startScanner(isOpen:boolean) {
     const allowed = await this.checkPermission();
 
     if (allowed) {
@@ -39,7 +40,8 @@ export class SpQrScannerPage implements OnInit {
 
       if (result.hasContent) {
         this.scanActive = false;
-        alert(result.content); //The QR content will come out here
+        this.isModalOpen = isOpen
+       // alert(result.content); //The QR content will come out here
         //Handle the data as your heart desires
         this.textOutput = result.content;
       } else {
@@ -64,5 +66,8 @@ export class SpQrScannerPage implements OnInit {
     // Use the id to enable/disable the menus
     this.menu.enable(false, 'main');
     this.menu.enable(true, 'main1');
+  }
+  cancel(isOpen:boolean){
+   this.isModalOpen = isOpen
   }
 }

@@ -77,6 +77,7 @@ export class AppComponent {
   }
   
 
+  
   // logout(){
   //   this.authService.getLogout(); 
   //   this.router.navigateByUrl('/login');

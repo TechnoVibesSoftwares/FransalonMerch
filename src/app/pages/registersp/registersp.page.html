@@ -1,16 +1,15 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="light ">
     <ion-menu-button main="menu" slot="start"></ion-menu-button>
     <ion-title> </ion-title>
-    <ion-avatar slot="end">
-      <img
-        alt="Silhouette of a person's head"
-        src="https://i.pinimg.com/736x/ef/b4/56/efb4563befb0ae1bed74f004785f3f0f.jpg"  
-      />
-    </ion-avatar>
+    <!-- <ion-avatar slot="end">
+      <img  src="https://www.shutterstock.com/image-vector/default-avatar-profile-social-media-260nw-1920331226.jpg" height="30%"/> 
+    </ion-avatar> -->
+
   </ion-toolbar>
 </ion-header>
 <ion-content>
+ <ion-card>
  
 <form>
   <ion-item lines="full">
@@ -73,12 +72,15 @@
  <ion-button
         type="submit"
         color="dark"
-        expand="block"
-         
+       expand="block"
+        
         (click)="doSubmitForm()"
         >Register</ion-button >
       <!----<a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>-->
   
 </form>
+
+ 
+</ion-card>
 </ion-content>
  

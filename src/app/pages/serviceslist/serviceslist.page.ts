@@ -19,7 +19,7 @@ export class ServiceslistPage implements OnInit {
     this.menu.enable(true, 'main');
     this.menu.enable(false, 'main1');
   }
-  public data = ['Hair Care', 'Body Massage', 'Pre-Bridal Grooming', 'Facials', 'Threading', 'Hair Cut', 'Manicure ', 'Pedicure', "nail treatments","tanning"," colouring and styling"," Bleach"];
+  public data = ['Hair Care  ', 'Body Massage', 'Pre-Bridal Grooming', 'Facials', 'Threading', 'Hair Cut', 'Manicure ', 'Pedicure', "nail treatments","tanning"," colouring and styling"," Bleach"];
   public results = [...this.data];
 
   handleChange(event) {

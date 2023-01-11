@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { SpregisterService } from 'src/app/services/spregister.service';
-import { Router } from '@angular/router';
+// import { SpregisterService } from 'src/app/services/spregister.service';
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-import {  MenuController,NavController } from '@ionic/angular';
-import { async } from 'rxjs';
 
+ import { SpregisterService } from 'src/app/services/spregister.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registersp',
   templateUrl: './registersp.page.html',
@@ -14,25 +13,27 @@ import { async } from 'rxjs';
 export class RegisterspPage implements OnInit {
   public errorMessage: string;
 
-  data = {
-    name: '',
-    contact: '',
-    email: '',
-    password: '',
-  };
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  SpregisterService: any;
+  data={
+   
+    name:'',
+    dob:'',
+    contact:'',
+    email:'',
+    password:'',
+    
+    gender:''
+    
+  
+     
+    
+    
+   };
+ 
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention, @typescript-eslint/no-shadow
-  constructor(
-    SpregisterService: SpregisterService,
-    private toastController: ToastController,
-    private router: Router,
-    public menu: MenuController,
-    private nav: NavController
-  ) {}
 
-  ngOnInit() {}
+  constructor(private SpregisterService:SpregisterService,private toastController: ToastController,private router: Router) { }
+  ngOnInit() {
+  }
 
   doSubmitForm(){
     console.log('Try to submit form');
@@ -43,10 +44,11 @@ export class RegisterspPage implements OnInit {
       this.presentToast('Fields can not be empty');
 
     }else{
-   /* this.SpregisterService.SpregisterService(this.data).subscribe(
+    this.SpregisterService.Spregister(this.data).subscribe(
       response=>{
         console.log(response);
-        this.presentToast('  Successfully Registered');
+        this.presentToast('Sp Successfully Registered');
+        this.router.navigateByUrl('/wel');
     },
       error=>{
 
@@ -54,25 +56,17 @@ export class RegisterspPage implements OnInit {
         this.presentToast(error);
        }
 
-    );*/
-    alert(' registration successfully');
-    this.router.navigateByUrl('/home');
+    );
   }
   }
 
-  async presentToast(msg) {
+  async presentToast(msg: string) {
      const toast = await this.toastController.create({
       message: msg,
       duration: 2000,
      });
     await toast.present();
   }
-  ionViewDidEnter() {
-    // Use the id to enable/disable the menus
-    this.menu.enable(true, 'main');
-    this.menu.enable(false, 'main1');
-  }
+
 
 }
-
-

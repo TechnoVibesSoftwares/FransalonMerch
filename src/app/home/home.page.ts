@@ -15,7 +15,7 @@ export class HomePage {
   constructor(private authService: AuthService,private router: Router,
     private nav: NavController,public menu: MenuController) { }
 
-  afterLoggedIn(){
+    afterLoggedIn(){
     this.authService.getTodos().subscribe(
       (data) => {
         console.log('Milgya Bhai : ',data);

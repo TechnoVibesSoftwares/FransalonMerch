@@ -16,4 +16,6 @@ export class SpServiceListPage implements OnInit {
     this.menu.enable(false, 'main');
     this.menu.enable(true, 'main1');
   }
+  public data = ['Hair Care  ', 'Body Massage', 'Pre-Bridal Grooming', 'Facials', 'Threading', 'Hair Cut', 'Manicure ', 'Pedicure', "nail treatments","tanning"," colouring and styling"," Bleach"];
+  public results = [...this.data];
 }

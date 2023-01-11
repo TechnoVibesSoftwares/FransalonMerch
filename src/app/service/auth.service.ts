@@ -10,6 +10,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
+  sendPasswordResetEmail(email: string) {
+    throw new Error('Method not implemented.');
+  }
 
   //Local URL
   //url="http://localhost:8080";

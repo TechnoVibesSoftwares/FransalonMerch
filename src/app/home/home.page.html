@@ -1,10 +1,10 @@
  <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-menu-button main="menu" slot="start"></ion-menu-button>
     <ion-title> </ion-title>
-    <ion-avatar slot="end">
-      <img  src="https://i.pinimg.com/736x/ef/b4/56/efb4563befb0ae1bed74f004785f3f0f.jpg" height="30%"/> 
-    </ion-avatar>
+    <!-- <ion-avatar slot="end">
+      <img  src="https://www.shutterstock.com/image-vector/default-avatar-profile-social-media-260nw-1920331226.jpg" height="30%"/> 
+    </ion-avatar> -->
 
   </ion-toolbar>
 </ion-header>
@@ -32,7 +32,7 @@
   
     </ion-card>
    
-  <ion-tabs>
+   <ion-tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="schedule" routerLink="/home">
         <ion-icon name="home"></ion-icon>
@@ -45,7 +45,7 @@
         <ion-label>Invoices</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button   routerLink="/serviceslist">
+      <ion-tab-button   routerLink="/addservice">
         <ion-icon name="list"></ion-icon>
         <ion-label>Services list</ion-label>
       </ion-tab-button>
@@ -56,34 +56,8 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs> 
-  
 
-
-  <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="schedule" routerLink="/home">
-          <ion-icon name="home"></ion-icon>
-          <ion-label>Home</ion-label>
-         
-        </ion-tab-button>
-    
-        <ion-tab-button   routerLink="/invoices">
-          <ion-icon name="albums"></ion-icon>
-          <ion-label>Invoices</ion-label>
-        </ion-tab-button>
-    
-        <ion-tab-button   routerLink="/serviceslist">
-          <ion-icon name="list"></ion-icon>
-          <ion-label>Services list</ion-label>
-        </ion-tab-button>
-    
-        <ion-tab-button   routerLink="/offers">
-          <ion-icon name="cash"></ion-icon>
-          <ion-label> Offers/Discount</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
+ 
      </ion-content>
      
  
-  
