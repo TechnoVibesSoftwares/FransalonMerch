@@ -99,6 +99,18 @@ const routes: Routes = [
     path: 'addservice',
     loadChildren: () => import('./pages/addservice/addservice.module').then( m => m.AddservicePageModule)
   },
+  {
+    path: 'creat',
+    loadChildren: () => import('./creat/creat.module').then( m => m.CreatPageModule)
+  },
+  {
+    path: 'add-new-task',
+    loadChildren: () => import('./add-new-task/add-new-task.module').then( m => m.AddNewTaskPageModule)
+  },
+  {
+    path: 'update-task',
+    loadChildren: () => import('./update-task/update-task.module').then( m => m.UpdateTaskPageModule)
+  },
   
 ];
 

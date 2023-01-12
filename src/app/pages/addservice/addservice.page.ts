@@ -31,7 +31,8 @@ Submit(){
 
   }else{
        this.cancel();
-    this.presentToast('  Successfully  ');
+    this.presentToast(' Successfully  ');
+ 
    console.log(this.data)
  
   }
