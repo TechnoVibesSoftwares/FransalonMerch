@@ -29,37 +29,37 @@ const routes: Routes = [
   {
     path: 'registersp',
     loadChildren: () => import('./pages/registersp/registersp.module').then( m => m.RegisterspPageModule),
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'invoices',
     loadChildren: () => import('./pages/invoices/invoices.module').then( m => m.InvoicesPageModule),
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'serviceslist',
     loadChildren: () => import('./pages/serviceslist/serviceslist.module').then( m => m.ServiceslistPageModule),
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'offers',
     loadChildren: () => import('./pages/offers/offers.module').then( m => m.OffersPageModule),
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'emloyee',
     loadChildren: () => import('./pages/emloyee/emloyee.module').then( m => m.EmloyeePageModule),
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'marketing',
     loadChildren: () => import('./pages/marketing/marketing.module').then( m => m.MarketingPageModule),
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'report',
     loadChildren: () => import('./pages/report/report.module').then( m => m.ReportPageModule),
-    canActivate:[AuthGuard]
+    // canActivate:[AuthGuard]
   },
   {
     path: 'wel',

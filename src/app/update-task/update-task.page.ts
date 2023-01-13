@@ -17,8 +17,13 @@ export class UpdateTaskPage implements OnInit {
   itemNam
   itemDueDate 
   itemPriority
-  itemCategory
-
+  itemcontact
+  itememail
+  itempass
+  itemadd
+  itemadhar
+  itemrol
+  itemdes
   constructor(public modalCtlr:ModalController, public todoServive:TodoService) { }
 
   ngOnInit() {
@@ -31,6 +36,14 @@ export class UpdateTaskPage implements OnInit {
     this.itemNam = this.task.value.itemNam
     this.itemDueDate = this.task.value.itemDueDate
     this.itemPriority = this.task.value.itemPriority
+     this.itemcontact = this.task.value.itemcontact
+     this.itememail = this.task.value.itememail
+     this.itempass = this.task.value.itempass
+     this.itemadd = this.task.value.itemadd
+     this.itemadhar = this.task.value.itemadhar
+     this.itemdes = this.task.value.itemdes
+     this.itemrol = this.task.value.itemrol
+     
     // this.categorySelectedCategory = this.task.value.itemCategory
     // console.log(this.task);
     
@@ -50,5 +63,6 @@ export class UpdateTaskPage implements OnInit {
     let uid = this.task.key
     await this.todoServive.updateTask(uid,this.newTaskObj)
     this.dismis()
+       console.log( this.newTaskObj);
   }
 }

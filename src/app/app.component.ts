@@ -56,7 +56,7 @@ export class AppComponent {
       this.ngOnDestroy();
     }
   }
-  
+  z
   checkStatus(event) {
     this.ngOnInit();
   }

@@ -3,7 +3,6 @@ import { AlertController, ModalController } from '@ionic/angular';
 import { AddNewTaskPage } from '../add-new-task/add-new-task.page';
 import { TodoService } from '../todo.service';
 import { UpdateTaskPage } from '../update-task/update-task.page';
-
 @Component({
   selector: 'app-creat',
   templateUrl: './creat.page.html',
@@ -17,7 +16,7 @@ export class CreatPage implements OnInit {
   constructor(public modalCtlr: ModalController, public todoService:TodoService) { 
     this.getAllTask()
   }
-  ngOnInit() {
+  ngOnInit()  {
     
   }
 

@@ -17,7 +17,13 @@ export class AddNewTaskPage implements OnInit {
   itemNam
   itemDueDate 
   itemPriority
-   
+  itemcontact
+  itememail
+  itempass
+  itemadd
+  itemadhar
+  itemrol
+  itemdes
 
 
   constructor(public modalCtlr: ModalController, public todoService:TodoService) {
@@ -31,7 +37,9 @@ export class AddNewTaskPage implements OnInit {
   }
   
   async add(){
-    this.newTaskObj = ({itemName:this.itemName, itemNam:this.itemNam, itemDueDate:this.itemDueDate, itemPriority:this.itemPriority })
+    this.newTaskObj = ({itemName:this.itemName, itemNam:this.itemNam, itemDueDate:this.itemDueDate, itemPriority:this.itemPriority ,itemcontact:this.itemcontact,itememail:this.itememail,itempass:this.itempass,itemadd:this.itemadd,
+    
+    itemadhar:this.itemadhar,itemdes:this.itemdes,itemrol:this.itemrol})
     console.log(this.newTaskObj);
     let uid =  this.itemDueDate
     
