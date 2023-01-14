@@ -1,12 +1,12 @@
-import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
- 
+ import { Storage } from '@ionic/storage';
+
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
 
-  constructor(private storage: Storage) {
+  constructor(private storage:Storage) {
     this.init()
    }
 

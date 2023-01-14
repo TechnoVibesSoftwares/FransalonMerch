@@ -1,14 +1,18 @@
+import { SpupdateTaskPage } from './../spupdate-task/spupdate-task.page';
+import { SpaddTaskPage } from './../spadd-task/spadd-task.page';
 import { Component, OnInit } from '@angular/core';
-import {ModalController } from '@ionic/angular';
-import { AddNewTaskPage } from '../add-new-task/add-new-task.page';
+import { AlertController, ModalController } from '@ionic/angular';
+ 
 import { TodoService } from '../todo.service';
-import { UpdateTaskPage } from '../update-task/update-task.page';
+ 
+
 @Component({
-  selector: 'app-creat',
-  templateUrl: './creat.page.html',
-  styleUrls: ['./creat.page.scss'],
+  selector: 'app-spcreate-task',
+  templateUrl: './spcreate-task.page.html',
+  styleUrls: ['./spcreate-task.page.scss'],
 })
-export class CreatPage implements OnInit {
+export class SpcreateTaskPage implements OnInit {
+
   todoList = []
   
   today: number = Date.now();
@@ -22,7 +26,7 @@ export class CreatPage implements OnInit {
 
   async addNewItem() {
     const modal = await this.modalCtlr.create({
-      component: AddNewTaskPage,
+      component: SpaddTaskPage,
     })
     modal.onDidDismiss().then(newTask =>{
       this.getAllTask()
@@ -37,12 +41,12 @@ export class CreatPage implements OnInit {
 
   delete(key) { 
     this.todoService.deleteTask(key)
-    this.getAllTask()
+    this.getAllTask() 
   }
-
+ 
   async update(selectedTask){
     const modal = await this.modalCtlr.create({
-      component: UpdateTaskPage,
+      component: SpupdateTaskPage,
       componentProps: {task: selectedTask}
     })
 

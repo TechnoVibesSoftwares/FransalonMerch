@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.sm90',
+  appId: 'io.ionic.sm50',
   appName: 'FRANSALON MERCHANT',
   webDir: 'www',
   bundledWebRuntime: false,

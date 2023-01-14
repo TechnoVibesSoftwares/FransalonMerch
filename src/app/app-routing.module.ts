@@ -111,6 +111,19 @@ const routes: Routes = [
     path: 'update-task',
     loadChildren: () => import('./update-task/update-task.module').then( m => m.UpdateTaskPageModule)
   },
+  {
+    path: 'spadd-task',
+    loadChildren: () => import('./spadd-task/spadd-task.module').then( m => m.SpaddTaskPageModule)
+  },
+  {
+    path: 'spcreate-task',
+    loadChildren: () => import('./spcreate-task/spcreate-task.module').then( m => m.SpcreateTaskPageModule)
+  },
+  {
+    path: 'spupdate-task',
+    loadChildren: () => import('./spupdate-task/spupdate-task.module').then( m => m.SpupdateTaskPageModule)
+  },
+  
   
 ];
 

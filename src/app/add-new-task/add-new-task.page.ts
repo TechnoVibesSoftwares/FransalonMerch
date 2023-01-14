@@ -14,7 +14,7 @@ export class AddNewTaskPage implements OnInit {
 
   newTaskObj = {}
   itemName
-  itemNam
+ 
   itemDueDate 
   itemPriority
   itemcontact
@@ -31,13 +31,10 @@ export class AddNewTaskPage implements OnInit {
    }
 
   ngOnInit() {
-    // this.categories.push('Gold')
-    // this.categories.push('Silver')
-    // this.categories.push('platinum')
   }
   
   async add(){
-    this.newTaskObj = ({itemName:this.itemName, itemNam:this.itemNam, itemDueDate:this.itemDueDate, itemPriority:this.itemPriority ,itemcontact:this.itemcontact,itememail:this.itememail,itempass:this.itempass,itemadd:this.itemadd,
+    this.newTaskObj = ({itemName:this.itemName, itemDueDate:this.itemDueDate, itemPriority:this.itemPriority ,itemcontact:this.itemcontact,itememail:this.itememail,itempass:this.itempass,itemadd:this.itemadd,
     
     itemadhar:this.itemadhar,itemdes:this.itemdes,itemrol:this.itemrol})
     console.log(this.newTaskObj);
@@ -53,14 +50,7 @@ export class AddNewTaskPage implements OnInit {
     this.dismis()
   }
   
-  // selectCategory(index){
-  //   this.categorySelectedCategory = this.categories[index]
-  //   console.log(this.categorySelectedCategory);
-  // }
-  // selectCategory1(index){
-  //   this.categorySelectedCategory = this.categories[index]
-  //   console.log(this.categorySelectedCategory);
-  // }
+ 
 
   async dismis(){
     await this.modalCtlr.dismiss(this.newTaskObj)
